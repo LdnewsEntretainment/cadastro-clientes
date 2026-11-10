@@ -1,0 +1,51 @@
+<mxfile host="app.diagrams.net" modified="2026-11-10T13:52:23.000Z" agent="GPT-6 Luna" version="24.7.17">
+  <diagram id="uml-clientes" name="Diagrama de classes">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="endereco" value="&lt;b&gt;Endereco&lt;/b&gt;&lt;hr&gt;- logradouro: string&lt;br&gt;- numero: string&lt;br&gt;- cidade: string&lt;br&gt;- uf: string&lt;hr&gt;+ constructor(logradouro, numero, cidade, uf)&lt;br&gt;+ getters/setters&lt;br&gt;+ toString(): string" style="swimlane;html=1;startSize=30;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;horizontal=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="60" y="280" width="270" height="210" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="pessoa" value="&lt;b&gt;Pessoa&lt;/b&gt;&lt;hr&gt;- nome: string&lt;br&gt;- endereco: Endereco&lt;hr&gt;+ constructor(nome, endereco)&lt;br&gt;+ get/set nome&lt;br&gt;+ get/set endereco" style="swimlane;html=1;startSize=30;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;horizontal=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="435" y="280" width="280" height="210" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="fisica" value="&lt;b&gt;PessoaFisica&lt;/b&gt;&lt;hr&gt;- cpf: string&lt;br&gt;- dataNascimento: string&lt;hr&gt;+ constructor(nome, cpf, dataNascimento, endereco)&lt;br&gt;+ get/set cpf&lt;br&gt;+ get/set dataNascimento&lt;br&gt;+ toString(): string" style="swimlane;html=1;startSize=30;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;horizontal=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="180" y="40" width="330" height="200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="juridica" value="&lt;b&gt;PessoaJuridica&lt;/b&gt;&lt;hr&gt;- cnpj: string&lt;br&gt;- razaoSocial: string&lt;hr&gt;+ constructor(nome, cnpj, razaoSocial, endereco)&lt;br&gt;+ get/set cnpj&lt;br&gt;+ get/set razaoSocial&lt;br&gt;+ toString(): string" style="swimlane;html=1;startSize=30;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;horizontal=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="650" y="40" width="350" height="200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="heranca-pf" value="" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="fisica" target="pessoa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="260"/>
+              <mxPoint x="520" y="260"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="heranca-pj" value="" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="juridica" target="pessoa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="260"/>
+              <mxPoint x="660" y="260"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="associacao-endereco" value="1" style="endArrow=none;startArrow=none;html=1;rounded=0;strokeWidth=2;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pessoa" target="endereco">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="385" as="sourcePoint"/>
+            <mxPoint x="345" y="385" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

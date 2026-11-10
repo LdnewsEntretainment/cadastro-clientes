@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">Diagrama UML do cadastro de clientes</title>
+  <desc id="desc">Classes Endereco e Pessoa, com PessoaFisica e PessoaJuridica herdando de Pessoa. Pessoa possui um Endereco.</desc>
+  <defs>
+    <marker id="heranca" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L10,6 L1,11 Z" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+    </marker>
+    <style>
+      .box { stroke: #334155; stroke-width: 2; rx: 8; }
+      .head { font: 700 19px Arial, sans-serif; fill: #172033; }
+      .txt { font: 15px Arial, sans-serif; fill: #172033; }
+      .line { stroke: #64748b; stroke-width: 1; }
+      .rel { fill: none; stroke: #334155; stroke-width: 2; }
+      .note { font: 14px Arial, sans-serif; fill: #334155; }
+      .small { font: 12px Arial, sans-serif; fill: #172033; }
+    </style>
+  </defs>
+  <rect width="1100" height="650" fill="#f8fafc"/>
+
+  <g>
+    <rect class="box" x="60" y="55" width="380" height="215" fill="#dcfce7"/>
+    <text class="head" x="250" y="84" text-anchor="middle">PessoaFisica</text>
+    <line class="line" x1="60" y1="98" x2="440" y2="98"/>
+    <text class="txt" x="82" y="127">- cpf: string</text>
+    <text class="txt" x="82" y="151">- dataNascimento: string</text>
+    <line class="line" x1="60" y1="166" x2="440" y2="166"/>
+    <text class="txt" x="82" y="193">+ constructor(nome, cpf, dataNascimento, endereco)</text>
+    <text class="txt" x="82" y="219">+ get/set cpf</text>
+    <text class="txt" x="82" y="243">+ get/set dataNascimento; + toString()</text>
+  </g>
+
+  <g>
+    <rect class="box" x="660" y="55" width="380" height="215" fill="#fee2e2"/>
+    <text class="head" x="850" y="84" text-anchor="middle">PessoaJuridica</text>
+    <line class="line" x1="660" y1="98" x2="1040" y2="98"/>
+    <text class="txt" x="682" y="127">- cnpj: string</text>
+    <text class="txt" x="682" y="151">- razaoSocial: string</text>
+    <line class="line" x1="660" y1="166" x2="1040" y2="166"/>
+    <text class="txt" x="682" y="193">+ constructor(nome, cnpj, razaoSocial, endereco)</text>
+    <text class="txt" x="682" y="219">+ get/set cnpj</text>
+    <text class="txt" x="682" y="243">+ get/set razaoSocial; + toString()</text>
+  </g>
+
+  <g>
+    <rect class="box" x="390" y="345" width="320" height="180" fill="#fef3c7"/>
+    <text class="head" x="550" y="375" text-anchor="middle">Pessoa</text>
+    <line class="line" x1="390" y1="389" x2="710" y2="389"/>
+    <text class="txt" x="412" y="419">- nome: string</text>
+    <text class="txt" x="412" y="443">- endereco: Endereco</text>
+    <line class="line" x1="390" y1="458" x2="710" y2="458"/>
+    <text class="txt" x="412" y="486">+ constructor(nome, endereco)</text>
+    <text class="txt" x="412" y="510">+ get/set nome; + get/set endereco</text>
+  </g>
+
+  <g>
+    <rect class="box" x="55" y="410" width="260" height="180" fill="#dbeafe"/>
+    <text class="head" x="185" y="440" text-anchor="middle">Endereco</text>
+    <line class="line" x1="55" y1="454" x2="315" y2="454"/>
+    <text class="txt" x="74" y="481">- logradouro: string</text>
+    <text class="txt" x="74" y="505">- numero: string</text>
+    <text class="txt" x="74" y="529">- cidade: string; - uf: string</text>
+    <line class="line" x1="55" y1="544" x2="315" y2="544"/>
+    <text class="small" x="74" y="563">+ constructor(logradouro, numero,</text>
+    <text class="small" x="74" y="583">cidade, uf); + toString()</text>
+  </g>
+
+  <path class="rel" d="M250 270 L250 310 L500 310 L500 345" marker-end="url(#heranca)"/>
+  <path class="rel" d="M850 270 L850 310 L600 310 L600 345" marker-end="url(#heranca)"/>
+  <path class="rel" d="M390 465 L315 465"/>
+  <text class="note" x="334" y="451">1</text>
+  <text class="note" x="325" y="487">associação</text>
+
+  <text class="note" x="60" y="625">UML: + público | - privado | # protegido</text>
+</svg>
