@@ -80,13 +80,4 @@ PessoaJuridica — Electronic Comércio | CNPJ: 11222333000181 | Razão social: 
 
 Os dois cadastros inválidos são informados pelo programa, mas não são adicionados à lista de clientes válidos. O programa continua a execução após cada erro.
 
-## Publicação e conferência
 
-O projeto deve ser publicado em um repositório **público** no GitHub, contendo os arquivos descritos na estrutura acima. Faça commits que representem alterações realmente realizadas no projeto.
-
-Antes de enviar o link da atividade:
-
-1. Confira se o `README.md`, o `index.js` e os dois arquivos do diagrama estão no repositório.
-2. Abra o link do repositório em uma janela anônima ou privada do navegador.
-3. Confirme que o repositório e seus arquivos podem ser acessados sem login.
-4. Envie na plataforma da atividade o link público do repositório.
